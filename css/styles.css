@@ -5,6 +5,7 @@
     --details-color: #757575;
     --background-color: #2F303A;
     --filter-backgroud: #F5F4FA;
+    --icon-fill:#afb1b8;
     --text-font-family:'Roboto', sans-serif;
     --logo-font-family: 'Raleway', sans-serif;
 }
@@ -67,13 +68,13 @@ header {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ECECEC;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 header .logo {
-    padding-right: 43px;
-    padding-left: 215px;
+    margin-right: 43px;
+    margin-left: 215px;
 }
 
 header nav ul {
@@ -81,6 +82,7 @@ header nav ul {
     align-items: center;
     gap: 50px;
     padding-right: 385px;
+    margin: 0;
 }
 
 .nav-link {
@@ -93,11 +95,23 @@ header nav ul {
     text-decoration: none;
 }
 
-.current{
+.current {
     color: var(--link-color);
+    position: relative;
+    top: 2px;
 }
 
-.contact-details {
+.current::after {
+    content: '';
+    background-image: url("/images/hover.svg");
+    background-size: cover;
+    display: block;
+    position: relative;
+    top: 33px;
+    height: 4px;
+}
+
+.contact-detail {
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
@@ -105,27 +119,52 @@ header nav ul {
     text-align: left;
     text-decoration: none;
     color: var(--details-color);
+    display: flex;
+    padding-left: 10px;
+}
+
+.contact-icon {
+    width: 16px;
+    height: 12px;
+    fill: var(--details-color);
+    cursor: pointer;
+}
+
+.contact-details {
+    display: flex;
+    align-items: center;
 }
 
 .contacts{
         display: flex;
-        align-content: center;
+        align-content: baseline;
         gap: 40px;
+        margin: 0;
 }
-.contact-details:hover,
-.contact-details:focus,
-.contact-details:active {
-color: var(--link-color);
+
+.contact-details:hover a,
+.contact-details:focus a,
+.contact-details:active a {
+    color: var(--link-color);
+}
+
+.contact-details:hover svg,
+.contact-details:focus svg,
+.contact-details:active svg {
+    fill: var(--link-color);
+    cursor: pointer;
 }
 
 /*Studio Styles*/
 
 .intro {
-    background-color: var(--background-color);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: rgba(196, 196, 196, 1);
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/background-image.png);
+    height: 600px;
 }
 
 .intro-title {
@@ -137,6 +176,7 @@ color: var(--link-color);
         color: #FFFFFF;
         width: 696px;
         margin-top: 200px;
+        margin-bottom: 0;
         padding-bottom: 30px;
 }
 
@@ -164,8 +204,25 @@ color: var(--link-color);
 .what-we-do {
     display: flex;
     flex-direction: column;
-    margin-top: 94px;
     gap: 94px;
+    margin: 0;
+}
+
+.competitive-advantage-svg-container {
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: #F5F4FA;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.competitive-advantage-svg {
+    width: 70px;
+    height: 70px;
+    margin: 0;
 }
 
 .competitive-advantages {
@@ -173,8 +230,7 @@ color: var(--link-color);
     align-items: center;
     justify-items: center;
     gap: 30px;
-    margin-left: 215px;
-    margin-right: 215px;
+    margin: 0px 215px;
 }
 .competitive-advantages-title {
         font-size: 14px;
@@ -191,6 +247,7 @@ color: var(--link-color);
         letter-spacing: 0.03em;
         text-align: left;
         color: var(--details-color);
+
 }
 
 .what-we-do div{
@@ -206,13 +263,14 @@ color: var(--link-color);
         line-height: 42px;
         letter-spacing: 0.03em;
         text-align: center;
+        margin: 0px;
 }
 
 .what-we-do-images {
     display: flex;
     flex-direction: row;
     gap: 30px;
-    padding-bottom: 94px;
+    margin: 0;
 }
 
 .our-team {
@@ -224,19 +282,16 @@ color: var(--link-color);
     gap: 50px;
 }
 
-.our-team h2 {
-    margin-top: 94px;
-}
-
 .team-members {
     display: flex;
     gap: 30px;
-    padding-bottom: 94px;
+    margin: 0;
 }
 
 .team-member {
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F;
 }
 
 .team-member-name {
@@ -246,6 +301,7 @@ color: var(--link-color);
         letter-spacing: 0.03em;
         text-align: center;
         margin-top: 30px;
+        margin-bottom: 10px;
 }
 
 .team-member-role {
@@ -255,7 +311,77 @@ color: var(--link-color);
         letter-spacing: 0.03em;
         text-align: center;
         color: var(--details-color);
-        margin-bottom: 30px;
+        margin: 0;
+}
+
+.team-member-social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 16px;
+    gap: 10px;
+}
+
+.team-member-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+        border-radius: 50%;
+}
+
+.team-member-social-svg {
+    fill: #afb1b8;
+    width: 20px; 
+    height: 20px;
+}
+
+.team-member-social-link:hover,
+.team-member-social-link:hover svg,
+.team-member-social-link:focus,
+.team-member-social-link:focus svg,
+.team-member-social-link:active,
+.team-member-social-link:active svg {
+   background-color:#2196F3;
+    fill: white;
+}
+
+.regular-customers {
+    margin: 94px 215px;
+}
+
+.regular-customers-logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.regular-customers-logo-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    border: 1px solid #AFB1B8;
+    padding: 16px 32px;
+}
+
+.regular-customers-logo-container svg {
+    fill: #afb1b8;
+}
+
+.regular-customers-logo-container:hover svg,
+.regular-customers-logo-container:hover 
+.regular-customers-logo-container:focus svg,
+.regular-customers-logo-container:focus
+.regular-customers-logo-container:active svg,
+.regular-customers-logo-container:active {
+    fill: #2196F3;
 }
 
 footer {
@@ -263,9 +389,15 @@ footer {
     color: #FFFFFF;
     padding-top: 60px;
     padding-bottom: 60px;
-        padding-left: 215px;
+    padding-left: 215px;
+    display: flex;
+    gap: 70px;
 }
 
+.footer-left-side {
+    display: flex;
+    flex-direction: column;
+}
 .address {
     display: flex;
     flex-direction: column;
@@ -287,6 +419,47 @@ footer {
         line-height: 16px;
         letter-spacing: 0.03em;
         text-align: left;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);;
+}
+
+.footer-social-svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+
+.footer-social-link:hover,
+.footer-social-link:hover svg,
+.footer-social-link:focus,
+.footer-social-link:focus svg,
+.footer-social-link:active,
+.footer-social-link:active svg {
+    background-color: #2196F3;
+    fill: white;
+    cursor: pointer;
+}
+
+.find-us-on h3{
+    margin: 20px 0;
+    text-transform: uppercase ;
 }
 
 /*Portofolio Styles*/
@@ -317,6 +490,7 @@ footer {
 .filter-button:active {
     color: #FFFFFF;
     background-color: var(--link-color);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .projects-cards {
@@ -331,6 +505,13 @@ footer {
     width: 370px;
     display: flex;
     flex-direction: column;
+}
+
+.projects:hover,
+.projects:focus,
+.projecs:active {
+box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+cursor: pointer;
 }
 
 .projects-description {
