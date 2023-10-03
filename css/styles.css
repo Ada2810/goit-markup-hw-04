@@ -50,9 +50,6 @@ ul {
 .container {
     margin: 0px;
     width: 1600px;
-    display: flex-inline;
-    align-items: center;
-    justify-items: center;
 }
 
 .intro,
