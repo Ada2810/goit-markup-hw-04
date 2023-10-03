@@ -373,6 +373,8 @@ header nav ul {
 
 .regular-customers-logo-container svg {
     fill: #afb1b8;
+    width: 106px;
+    height: 60px;
 }
 
 .regular-customers-logo-container:hover svg,
