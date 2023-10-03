@@ -367,6 +367,7 @@ header nav ul {
     border-radius: 4px;
     border: 1px solid #AFB1B8;
     padding: 16px 32px;
+        cursor: pointer;
 }
 
 .regular-customers-logo-container svg {
