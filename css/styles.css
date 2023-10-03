@@ -327,7 +327,7 @@ header nav ul {
     justify-content: center;
     width: 44px;
     height: 44px;
-        border-radius: 50%;
+    border-radius: 50%;
 }
 
 .team-member-social-svg {
@@ -344,6 +344,7 @@ header nav ul {
 .team-member-social-link:active svg {
    background-color:#2196F3;
     fill: white;
+    cursor: pointer;
 }
 
 .regular-customers {
