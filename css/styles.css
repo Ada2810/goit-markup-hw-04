@@ -46,6 +46,7 @@ body {
 
 ul {
     list-style: none;
+    padding: 0px;
 }
 
 .intro,
@@ -61,14 +62,21 @@ ul {
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-bottom: 1px solid #ECECEC;
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.header-left-side {
+    display: flex;
+    align-items: center;
 }
 
 header .logo {
-    margin-right: 43px;
+    margin-right: 100px;
 }
 
 header nav ul {
@@ -76,7 +84,6 @@ header nav ul {
     align-items: center;
     justify-content: center;
     gap: 50px;
-    padding-right: 385px;
     margin: 0;
 }
 
@@ -403,15 +410,17 @@ footer {
     color: #FFFFFF;
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-left: 215px;
     display: flex;
+    align-items: center;
     gap: 70px;
+    padding-left: 10%;
 }
 
 .footer-left-side {
     display: flex;
     flex-direction: column;
 }
+
 .address {
     display: flex;
     flex-direction: column;
