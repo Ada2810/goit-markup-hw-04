@@ -400,12 +400,15 @@ header nav ul {
 }
 
 .regular-customers-logo-container:hover svg,
-.regular-customers-logo-container:hover 
 .regular-customers-logo-container:focus svg,
-.regular-customers-logo-container:focus
-.regular-customers-logo-container:active svg,
-.regular-customers-logo-container:active {
+.regular-customers-logo-container:active svg {
     fill: #2196F3;
+}
+
+.regular-customers-logo-container:hover,
+.regular-customers-logo-container:focus,
+.regular-customers-logo-container:active {
+    border-color: #2196F3;
 }
 
 footer {
